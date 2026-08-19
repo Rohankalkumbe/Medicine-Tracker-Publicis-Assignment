@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ABC Pharmacy - Medicine Tracker</title>
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="app-header">
+  <h1>ABC Pharmacy &mdash; Medicine Tracker</h1>
+</header>
+
+<main class="container">
+
+  <section class="toolbar">
+    <input id="searchBox" type="text" placeholder="Search by medicine name..." />
+    <button id="addMedicineBtn" class="btn btn-primary">+ Add Medicine</button>
+  </section>
+
+  <section class="legend">
+    <span class="legend-item"><span class="swatch red"></span> Expiring within 30 days</span>
+    <span class="legend-item"><span class="swatch yellow"></span> Low stock (&lt; 10 units)</span>
+  </section>
+
+  <section>
+    <table id="medicineTable">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Full Name</th>
+          <th>Expiry Date</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Brand</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="medicineTableBody">
+        <!-- rows injected by app.js -->
+      </tbody>
+    </table>
+    <p id="emptyState" class="empty-state" style="display:none;">No medicines found.</p>
+  </section>
+
+  <section class="sales-section">
+    <h2>Recent Sales</h2>
+    <table id="salesTable">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Medicine</th>
+          <th>Qty Sold</th>
+          <th>Unit Price</th>
+          <th>Total</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="salesTableBody"></tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- Add Medicine Modal -->
+<div id="addModal" class="modal-overlay hidden">
+  <div class="modal">
+    <h2>Add Medicine</h2>
+    <form id="addMedicineForm">
+      <label>Full Name
+        <input type="text" name="fullName" required />
+      </label>
+      <label>Notes
+        <textarea name="notes" rows="2"></textarea>
+      </label>
+      <label>Expiry Date
+        <input type="date" name="expiryDate" required />
+      </label>
+      <label>Quantity
+        <input type="number" name="quantity" min="0" required />
+      </label>
+      <label>Price
+        <input type="number" name="price" min="0" step="0.01" required />
+      </label>
+      <label>Brand
+        <input type="text" name="brand" required />
+      </label>
+      <div class="modal-actions">
+        <button type="button" id="cancelAddBtn" class="btn btn-secondary">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Sell Medicine Modal -->
+<div id="sellModal" class="modal-overlay hidden">
+  <div class="modal">
+    <h2>Record Sale</h2>
+    <p id="sellMedicineName"></p>
+    <form id="sellForm">
+      <input type="hidden" name="medicineId" />
+      <label>Quantity to Sell
+        <input type="number" name="quantity" min="1" required />
+      </label>
+      <div class="modal-actions">
+        <button type="button" id="cancelSellBtn" class="btn btn-secondary">Cancel</button>
+        <button type="submit" class="btn btn-primary">Confirm Sale</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

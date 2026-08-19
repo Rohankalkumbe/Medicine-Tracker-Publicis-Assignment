@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "FullName": "Paracetamol 500mg",
+    "Notes": "Common pain reliever and fever reducer",
+    "ExpiryDate": "2026-09-05T00:00:00",
+    "Quantity": 150,
+    "Price": 25.50,
+    "Brand": "Cipla"
+  },
+  {
+    "Id": 2,
+    "FullName": "Amoxicillin 250mg",
+    "Notes": "Antibiotic, complete full course",
+    "ExpiryDate": "2026-08-30T00:00:00",
+    "Quantity": 8,
+    "Price": 85.00,
+    "Brand": "Sun Pharma"
+  },
+  {
+    "Id": 3,
+    "FullName": "Cetirizine 10mg",
+    "Notes": "Antihistamine for allergies",
+    "ExpiryDate": "2027-03-15T00:00:00",
+    "Quantity": 30,
+    "Price": 15.75,
+    "Brand": "Dr. Reddy\u0027s"
+  },
+  {
+    "Id": 4,
+    "FullName": "Ibuprofen 400mg",
+    "Notes": "NSAID, take after food",
+    "ExpiryDate": "2026-08-25T00:00:00",
+    "Quantity": 5,
+    "Price": 32.00,
+    "Brand": "Abbott"
+  },
+  {
+    "Id": 5,
+    "FullName": "Metformin 500mg",
+    "Notes": "For type 2 diabetes management",
+    "ExpiryDate": "2027-01-10T00:00:00",
+    "Quantity": 100,
+    "Price": 45.20,
+    "Brand": "Mankind Pharma"
+  },
+  {
+    "Id": 6,
+    "FullName": "Dolo 650mg",
+    "Notes": "Fever and mild pain relief, take after food",
+    "ExpiryDate": "2027-08-19T00:00:00",
+    "Quantity": 150,
+    "Price": 22.5,
+    "Brand": "Micro Labs"
+  }
+]

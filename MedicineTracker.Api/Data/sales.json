@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 1,
+    "MedicineId": 3,
+    "MedicineName": "Cetirizine 10mg",
+    "QuantitySold": 30,
+    "UnitPrice": 15.75,
+    "TotalAmount": 472.50,
+    "SaleDate": "2026-08-19T10:41:00.820414Z"
+  },
+  {
+    "Id": 2,
+    "MedicineId": 5,
+    "MedicineName": "Metformin 500mg",
+    "QuantitySold": 100,
+    "UnitPrice": 45.20,
+    "TotalAmount": 4520.00,
+    "SaleDate": "2026-08-19T10:41:20.3489429Z"
+  }
+]
