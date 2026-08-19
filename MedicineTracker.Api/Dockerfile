@@ -12,6 +12,7 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 ENV ASPNETCORE_URLS=http://+:${PORT}
+ENV DOTNET_hostBuilder__reloadConfigOnChange=false
 EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "MedicineTracker.Api.dll"]
